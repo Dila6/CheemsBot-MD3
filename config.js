@@ -41,26 +41,26 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.owner = ['ur number'] //ur owner number
-global.ownername = "ur name"
-global.ytname = "YT: Xeon" //ur yt chanel name
-global.socialm = "GitHub: DGXeon" //ur github or insta name
-global.location = "India, Mizoram, Aizawl" //ur location
+global.owner = ['94766866297'] //ur owner number
+global.ownername = "King Buddhika"
+global.ytname = "YT: BS TECH" //ur yt chanel name
+global.socialm = "GitHub: KingBuddhika" //ur github or insta name
+global.location = "Sri Lanka, Sabaragamuwa, Embilipitiya" //ur location
 
 //bot bombdy
-global.botname = "ur bot name" //ur bot name
-global.websitex = "https://youtu.be/xn9RatOrbuI" //ur website
+global.botname = "Bot Zone" //ur bot name
+global.websitex = "https://youtube.com/channel/UCMiHCPhP2ktLlGOL9594VPA" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
-global.packname = "Cheems Bot Stickers\n\n\n\n\n\n\n🦄🦄🦄 "
-global.author = "🦄Dream Guy Xeon"
+global.packname = "BS TECH BOT ZONE🦄"
+global.author = "King Buddhika"
 global.themeemoji = "🐶"
 global.reactmoji = "😘"
-global.ownertag = ['ur number'] //ur owner tag
-global.ownernummenu = ['ur number'] //ur owner number in menu and all
-global.watermark = "Xeon Bot Inc." //ur watermark
-global.botscript = "https://github.com/DGXeon/CheemsBot-MD3"
-global.linkz1 = "https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"
-global.linkz2 = "https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd"
+global.ownertag = ['94766866297'] //ur owner tag
+global.ownernummenu = ['94766866297'] //ur owner number in menu and all
+global.watermark = "BS TECH BOT ZONE" //ur watermark
+global.botscript = "https://github.com/KingBuddhika/CheemsBot-MD3"
+global.linkz1 = "https://chat.whatsapp.com/KmE7YzrrQBk124CrpI8PCd"
+global.linkz2 = "https://chat.whatsapp.com/KpYn7oNjpSl82RQm23BhMz"
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
