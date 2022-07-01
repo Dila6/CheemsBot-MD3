@@ -6422,7 +6422,7 @@ let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
 let ytvc = await hx.youtube(anu.url)
 let buttons = [
 {buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${ytvc.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `ytmp3x ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
@@ -6555,10 +6555,8 @@ if (isBanChat) return reply(mess.banChat)
                 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid`)
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
-                if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
-                let caption = `*YOUTUBE MUSIC*\n\n*${themeemoji}Title :* ${media.title}\n*${themeemoji}File size :* ${media.filesizeF}\n*${themeemoji}Url :* ${isUrl(text)}\n*${themeemoji}Ext :* MP3\n*${themeemoji}Resolution :* ${args[1] || '128kbps'}`
-                buf = await getBuffer(media.thumb)
-                XeonBotInc.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${caption}` }, { quoted: m }).catch((err) => reply(mess.error))                
+                if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))                
+                buf = await getBuffer(media.thumb)                
                 XeonBotInc.sendMessage(m.chat, {audio:{url:media.dl_link}, mimetype:"audio/mpeg", fileName: `${media.title}.mp3`,  quoted: m, contextInfo: { externalAdReply:{title:media.title,body:"YOUTUBE MP3",mediaType:"2",thumbnail:buf,mediaUrl:`${text}`}}}).catch((err) => reply(mess.error))
                 }
             break
