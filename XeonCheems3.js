@@ -6466,29 +6466,23 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `*| YOUTUBE SONG |*
+caption: `*┏━❬𝙱𝙾𝚃 𝚉𝙾𝙽𝙴 🐲❭*
+    
+   *⬇️ SONG DOWNLODER*
 
-${global.themeemoji} Title : ${anu.title}
-${global.themeemoji} Ext : Search
-${global.themeemoji} ID : ${anu.videoId}
-${global.themeemoji} Duration : ${anu.timestamp}
-${global.themeemoji} Viewers : ${anu.views}
-${global.themeemoji} Uploaded : ${anu.ago}
-${global.themeemoji} Author : ${anu.author.name}
-${global.themeemoji} Channel : ${anu.author.url}
-${global.themeemoji} Description : ${anu.description}
-${global.themeemoji} Url : ${anu.url}`,
-footer: `${global.botname}`,
+┃💎Title : ${anu.title}
+
+┃⏳Duration : ${anu.timestamp}
+
+┃✍️Author : ${anu.author.name}
+
+┃🔗Url : ${anu.url}
+
+┗━━━━━━━━━❊`,
+footer: `𝙴𝙳𝙼 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻`,
 buttons: buttons,
 headerType: 4,
-contextInfo:{externalAdReply:{
-title: anu.title,
-body: `${global.botname}`,
-thumbnail: log0,
-mediaType:2,
-mediaUrl: anu.url,
-sourceUrl: anu.url
-}}
+}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
