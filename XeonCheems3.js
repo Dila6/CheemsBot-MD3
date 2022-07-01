@@ -6483,7 +6483,6 @@ footer: `𝙴𝙳𝙼 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻`,
 buttons: buttons,
 headerType: 4,
 }
-}
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break		
