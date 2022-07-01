@@ -6457,7 +6457,6 @@ case 'song': {
 if (isBanChat) return reply(mess.banChat)
 let yts = require("yt-search")
 let search = await yts(text)
-let anu = search.videos[Math.floor(Math.1 * search.videos.length)]
 let ytvc = await hx.youtube(anu.url)
 let buttons = [
 {buttonId: `ytdl ${anu.url}`, buttonText: {displayText: 'DOCUMENT'}, type: 1},
