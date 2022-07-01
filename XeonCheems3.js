@@ -6413,7 +6413,7 @@ reply("Error link!")
 }
 }
 break
-case 'music': case 'play': case 'song': case 'ytplay': {
+case 'music': case 'play': case 'ytplay': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let yts = require("yt-search")
@@ -6453,6 +6453,46 @@ sourceUrl: anu.url
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 break
+case 'song': {
+   if (isBan) return reply(mess.ban)	 			
+if (isBanChat) return reply(mess.banChat)
+let yts = require("yt-search")
+let search = await yts(text)
+let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+let ytvc = await hx.youtube(anu.url)
+let buttons = [
+{buttonId: `ytdl ${anu.url}`, buttonText: {displayText: 'DOCUMENT'}, type: 1},
+{buttonId: `ytmp3x ${anu.url}`, buttonText: {displayText: 'AUDIO'}, type: 1}
+]
+let buttonMessage = {
+image: { url: anu.thumbnail },
+caption: `*| YOUTUBE SONG |*
+
+${global.themeemoji} Title : ${anu.title}
+${global.themeemoji} Ext : Search
+${global.themeemoji} ID : ${anu.videoId}
+${global.themeemoji} Duration : ${anu.timestamp}
+${global.themeemoji} Viewers : ${anu.views}
+${global.themeemoji} Uploaded : ${anu.ago}
+${global.themeemoji} Author : ${anu.author.name}
+${global.themeemoji} Channel : ${anu.author.url}
+${global.themeemoji} Description : ${anu.description}
+${global.themeemoji} Url : ${anu.url}`,
+footer: `${global.botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: anu.title,
+body: `${global.botname}`,
+thumbnail: log0,
+mediaType:2,
+mediaUrl: anu.url,
+sourceUrl: anu.url
+}}
+}
+XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
+}
+break		
 case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -6585,7 +6625,6 @@ if (isBan) return reply(mess.ban)
                 tummb = await getBuffer(anu.thumb)
                 audio = await getBuffer(anu.audio)        
                 XeonBotInc.sendMessage(m.chat, {document: audio, mimetype: 'audio/mpeg', fileName: `${anu.title}`}, { quoted : m }).catch((err) => reply(mess.error))
-                XeonBotInc.sendMessage(m.chat, { video: { url: anu.video }, jpegThumbnail:tummb, caption: `${util.format(anu)}`}, { quoted: m }).catch((err) => reply(mess.error))
             }
             break
 case 'bts':
