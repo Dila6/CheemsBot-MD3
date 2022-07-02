@@ -1597,58 +1597,53 @@ switch(command) {
 	case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-timestampe = speed();
-latensie = speed() - timestampe
-                anu = ``
-const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
-                    templateMessage: {
-                        hydratedTemplate: {
-                            hydratedContentText: anu,
-                            locationMessage: {
-                            jpegThumbnail: fs.readFileSync('./XeonMedia/cheemspic.jpg')},
-                            hydratedFooterText: `Hi 🤚 ${pushname}
-How Are You? 😊
-❏「 INFO BOT 」
-𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${global.botnma}
-𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${global.ownernma}
-𝗢𝘄𝗻𝗲𝗿 𝗡𝘂𝗺𝗯𝗲𝗿 : ${global.owner}
-𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
-Please Select Button Below
-`,
-                            hydratedButtons: [{
+XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
+	                let btn = [{
                                 urlButton: {
-                                    displayText: 'YouTube📍',
-                                    url: 'https://youtu.be/imFIX-Wrt3s'
+                                    displayText: 'YouTube 🍒',
+                                    url: `${websitex}`
                                 }
                             }, {
-                            	urlButton: {
-                                displayText: 'Script🔖',
-                                    url: 'https://github.com/DGXeon/CheemsBot-MD'
+                                callButton: {
+                                    displayText: 'Script 🍜',
+                                    url: `${botscript}`
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: '🍇All Menu🍇',
-                                    id: `${prefix}allmenu`
+                                    displayText: 'All Menu 🍱',
+                                    id: 'allmenu'
                                 }
-                                }, {
+                            }, {
                                 quickReplyButton: {
-                                    displayText: '🍒List Menu🍒',
-                                    id: `${prefix}command`
-                                }
-                                }, {
+                                    displayText: 'List Menu 🍢',
+                                    id: 'command'
+                                }  
+                            }, {
                                 quickReplyButton: {
-                                    displayText: '👤Owner👤',
-                                    id: `${prefix}owner`
+                                    displayText: 'Owner 🤣',
+                                    id: 'owner'
                                 }
                             }]
+                         let setbot = db.data.settings[botNumber]
+                        if (setbot.templateImage) {
+                        XeonBotInc.send5ButImg(m.chat, menulist, global.botname, global.thumb, btn, global.thumb)
+                        } else if (setbot.templateGif) {
+                        XeonBotInc.send5ButGif(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                        } else if (setbot.templateVid) {
+                        XeonBotInc.send5ButVid(m.chat, menulist, global.botname, global.vidmenu, btn, global.thumb)
+                        } else if (setbot.templateMsg) {
+                        XeonBotInc.send5ButMsg(m.chat, menulist, global.botname, btn)
+                        } else if (setbot.templateDocument) {
+                        let buttonmenu = [
+        	{ urlButton: { displayText: `YouTube 🍒`, url : `${websitex}` } },
+            { urlButton: { displayText: `Script 🍜`, url: `${botscript}` } },
+            { quickReplyButton: { displayText: `All Menu 🍱`, id: 'allmenu'} },
+            { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
+            { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
+        	]
+        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
                         }
-                    }
-                }), { userJid: m.chat })
-                XeonBotInc.relayMessage(m.chat, template.message, { messageId: template.key.id })
-                }
+                     }
             break
 case 'menuxxx':
 case 'helpxxx':
