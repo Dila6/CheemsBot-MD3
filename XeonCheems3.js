@@ -671,17 +671,17 @@ limit: limitUser,
 	    if (setting) {
 		if (!isNumber(setting.status)) setting.status = 0
 		if (!('autobio' in setting)) setting.autobio = false
-		if (!('templateImage' in setting)) setting.templateImage = false
+		if (!('templateImage' in setting)) setting.templateImage = true
 		if (!('templateGif' in setting)) setting.templateGif = false
 		if (!('templateMsg' in setting)) setting.templateMsg = false
-		if (!('templateDocument' in setting)) setting.templateDocument = true
+		if (!('templateDocument' in setting)) setting.templateDocument = false
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
 		autobio: false,
-		templateImage: false,
+		templateImage: true,
 		templateGif: false,
 		templateMsg: false,
-		templateDocument: true,
+		templateDocument: false,
 	    }
 } catch (err) {
 console.error(err)
