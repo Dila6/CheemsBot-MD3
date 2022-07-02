@@ -48,7 +48,7 @@ global.socialm = "GitHub: KingBuddhika" //ur github or insta name
 global.location = "Sri Lanka, Sabaragamuwa, Embilipitiya" //ur location
 
 //bot bombdy
-global.botname = "Bot Zone" //ur bot name
+global.botname = "EDM BOT ZONE" //ur bot name
 global.websitex = "https://youtube.com/channel/UCMiHCPhP2ktLlGOL9594VPA" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
 global.packname = "BS TECH BOT ZONE🦄"
@@ -57,7 +57,7 @@ global.themeemoji = "🐶"
 global.reactmoji = "😘"
 global.ownertag = ['94766866297'] //ur owner tag
 global.ownernummenu = ['94766866297'] //ur owner number in menu and all
-global.watermark = "BS TECH BOT ZONE" //ur watermark
+global.watermark = "EDM BOT ZONE" //ur watermark
 global.botscript = "https://github.com/KingBuddhika/CheemsBot-MD3"
 global.linkz1 = "https://chat.whatsapp.com/KmE7YzrrQBk124CrpI8PCd"
 global.linkz2 = "https://chat.whatsapp.com/KpYn7oNjpSl82RQm23BhMz"
