@@ -48,11 +48,11 @@ global.socialm = "GitHub: KingBuddhika" //ur github or insta name
 global.location = "Sri Lanka, Sabaragamuwa, Embilipitiya" //ur location
 
 //bot bombdy
-global.botname = "EDM BOT ZONE" //ur bot name
+global.botname = "EDM BOT MD" //ur bot name
 global.websitex = "https://youtube.com/channel/UCMiHCPhP2ktLlGOL9594VPA" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/zlzQZvXH.mp4' } //gif and video menu
-global.packname = "BS TECH BOT ZONE🦄"
-global.author = "King Buddhika"
+global.packname = "EDM BOT ZONE🦄"
+global.author = "EDM OFFICIAL"
 global.themeemoji = "🐶"
 global.reactmoji = "😘"
 global.ownertag = ['94766866297'] //ur owner tag
