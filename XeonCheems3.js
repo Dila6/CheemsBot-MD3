@@ -6505,7 +6505,6 @@ if (isBan) return reply(mess.ban)
                 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
                 var capti = `*YOUTUBE VIDEO*\n\n*${themeemoji}Title* : ${media.title}\n*${themeemoji}File size* : ${media.filesizeF}\n*${themeemoji}Url* : ${isUrl(text)}\n*${themeemoji}Ext* : Mp4\n*${themeemoji}Resoultion* : ${args[1] || '360p'}`
                 var buf = await getBuffer(media.thumb)
-                XeonBotInc.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${capti}` }, { quoted: m })
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `Here you go!` }, { quoted: m }).catch((err) => reply(mess.error))
             }
             break
