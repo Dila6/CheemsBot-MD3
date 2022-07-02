@@ -6599,7 +6599,7 @@ if (isBan) return reply(mess.ban)
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=RNa4thokVJ4 360p`)
                 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid!`)
-                let quality = args[1] ? args[1] : '360p'
+                let quality = '720p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
                 var capti = `*YOUTUBE VIDEO*\n\n*${themeemoji}Title* : ${media.title}\n*${themeemoji}File size* : ${media.filesizeF}\n*${themeemoji}Url* : ${isUrl(text)}\n*${themeemoji}Ext* : Mp4\n*${themeemoji}Resoultion* : ${args[1] || '360p'}`
@@ -6612,7 +6612,8 @@ if (isBan) return reply(mess.ban)
                 if (isBan) return reply(mess.ban)
                     if (isBanChat) return reply(mess.banChat)
                                 let { ytv } = require('./lib/y2mate')
-                                let media = await ytv(text, 720p)
+				 let quality = 720p
+                                let media = await ytv(text, quality)
                                 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
                                 var capti = `*YOUTUBE VIDEO*\n\n*${themeemoji}Title* : ${media.title}\n*${themeemoji}File size* : ${media.filesizeF}\n*${themeemoji}Url* : ${isUrl(text)}\n*${themeemoji}Ext* : Mp4\n*${themeemoji}Resoultion* : 720p`
                                 var buf = await getBuffer(media.thumb)
