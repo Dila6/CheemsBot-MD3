@@ -6522,26 +6522,18 @@ if (isBan) return reply(mess.ban)
                 
             *⬇️ YT VIDEO DOWNLOADER*
             
-            ┃💎Title : ${anu.title}
+┃💎Title : ${anu.title}
             
-            ┃⏳Duration : ${anu.timestamp}
+┃⏳Duration : ${anu.timestamp}
             
-            ┃✍️Author : ${anu.author.name}
+┃✍️Author : ${anu.author.name}
             
-            ┃🔗Url : ${anu.url}
+┃🔗Url : ${anu.url}
             
-            ┗━━━━━━━━━━━✺`,
+┗━━━━━━━━━━━✺`,
             footer: `${global.botname}`,
             buttons: buttons,
             headerType: 4,
-            contextInfo:{externalAdReply:{
-            title: anu.title,
-            body: `${global.botname}`,
-            thumbnail: log0,
-            mediaType:2,
-            mediaUrl: anu.url,
-            sourceUrl: anu.url
-            }}
             }
             XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
