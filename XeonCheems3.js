@@ -1641,7 +1641,12 @@ XeonBotInc.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key 
             { quickReplyButton: { displayText: `List Menu 🍢`, id: 'command'} },
             { quickReplyButton: { displayText: `Owner 🤣`, id: 'owner'} }
         	]
-        	XeonBotInc.sendMessage(m.chat, { caption: menulist, document: fs.readFileSync('./XeonMedia/theme/cheems.xlsx'), mimetype: `${docs}`, fileName: `${ownername}`, templateButtons: buttonmenu, footer: `${botname}`, mentionedJid: [m.sender] })
+        	XeonBotInc.sendMessage(m.chat, { 
+            caption: menulist, 
+            image: `${global.thum}`,
+            templateButtons: buttonmenu, 
+            footer: `${botname}`, 
+            mentionedJid: [m.sender] })
                         }
                      }
             break
@@ -6520,7 +6525,7 @@ if (isBan) return reply(mess.ban)
             image: { url: anu.thumbnail },
             caption: `*┏━❬EDM BOT MD🐲❭*
                 
-            *⬇️ YT VIDEO DOWNLOADER*
+      *⬇️ YT VIDEO DOWNLOADER*
             
 ┃💎Title : ${anu.title}
             
