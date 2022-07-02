@@ -6340,80 +6340,8 @@ case 'ttaud':{
     XeonBotInc.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
    }
  break
-case 'play2': case 'ytplay2': {
-if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
- reply(mess.wait)
-let yts = require("yt-search")
-let search = await yts(text)
-let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-let ytvc = await hx.youtube(anu.url)
-let buttons = [
-{buttonId: `.ytmp4 ${anu.url}`, buttonText: {displayText: 'VIDEO'}, type: 1},
-{buttonId: `.ytmp3 ${anu.url}`, buttonText: {displayText: 'AUDIO'}, type: 1}
-                ]
-                let buttonMessage = {
-                    image: { url: anu.thumbnail},
-                    caption: `*── 「 YOUTUBE PLAY 」 ──*
 
-Title : ${anu.title}
-Ext : Search
-ID : ${anu.videoId}
-Duration : ${anu.timestamp}
-Viewers : ${anu.views}
-Uploaded : ${anu.ago}
-Author : ${anu.author.name}
-Channel : ${anu.author.url}
-Description : ${anu.description}
-Url : ${anu.url}`,
-                    footer: `${botname}`,
-                    buttons: buttons,
-                    headerType: 4
-                }
-                XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-case 'ytdl2': case 'yt2': case 'youtube2':{
-	if (isBan) return reply(mess.ban)
-	if (isBanChat) return reply(mess.banChat)
- reply(mess.wait)
-if (!args[0]) return reply(mess.linkm)
-try {
-hx.youtube(args[0]).then(async(res) => {
-textyt = `*── 「 YOUTUBE DOWNLOAD 」 ──*
-
-${themeemoji} Title : ${res.title}
-${themeemoji} Size : ${res.size}
-${themeemoji} Quality : ${res.quality}
-
-_Select video or audio and wait a while_`
-let buttons = [
-{buttonId: `.ytmp4 ${res.link}`, buttonText: {displayText: 'VIDEO'}, type: 1},
-{buttonId: `.ytmp3 ${res.link}`, buttonText: {displayText: 'AUDIO'}, type: 1}
-]
-let buttonMessage = {
-image: {url:res.thumb},
-caption: textyt,
-footer: botname,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: res.title,
-body: ownername,
-thumbnail: {url:res.thumb},
-mediaType:2,
-mediaUrl: args[0],
-sourceUrl: args[0]
-}}
-}
-XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
-}).catch(_ => _)
-} catch {
-reply("Error link!")
-}
-}
-break
-case 'music': case 'play': case 'ytplay': {
+case 'play': case 'yt': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let yts = require("yt-search")
@@ -6421,23 +6349,30 @@ let search = await yts(text)
 let anu = search.videos[0]
 let ytvc = await hx.youtube(anu.url)
 let buttons = [
-{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytmp3x ${anu.url}`, buttonText: {displayText: '♫ Audio'}, type: 1}
+{buttonId: `ytvd ${ytvc.link}`, buttonText: {displayText: 'VIDEO'}, type: 1},
+{buttonId: `ytmp3x ${anu.url}`, buttonText: {displayText: 'AUDIO'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `*| YOUTUBE PLAY |*
+caption: `*┏━❬EDM BOT MD🐲❭*
+    
+*⬇️ YOUTUBE DOWNLOADER*
 
-${global.themeemoji} Title : ${anu.title}
-${global.themeemoji} Ext : Search
-${global.themeemoji} ID : ${anu.videoId}
-${global.themeemoji} Duration : ${anu.timestamp}
-${global.themeemoji} Viewers : ${anu.views}
-${global.themeemoji} Uploaded : ${anu.ago}
-${global.themeemoji} Author : ${anu.author.name}
-${global.themeemoji} Channel : ${anu.author.url}
-${global.themeemoji} Description : ${anu.description}
-${global.themeemoji} Url : ${anu.url}`,
+┃💎Title : ${anu.title}
+
+┃⏳Duration : ${anu.timestamp}
+
+┃✍️Author : ${anu.author.name}
+
+┃👀Viewers : ${anu.views}
+
+┃⬆️Uploded : ${anu.ago}
+
+┃🔗Url : ${anu.url}
+
+┃📄Description : ${anu.description}
+
+┗━━━━━━━━━━━✺`,
 footer: `${global.botname}`,
 buttons: buttons,
 headerType: 4,
@@ -6466,7 +6401,7 @@ let buttons = [
 ]
 let buttonMessage = {
 image: { url: anu.thumbnail },
-caption: `*┏━❬𝙱𝙾𝚃 𝚉𝙾𝙽𝙴 🐲❭*
+caption: `*┏━❬EDM BOT MD 🐲❭*
     
    *⬇️ SONG DOWNLODER*
 
@@ -6479,52 +6414,13 @@ caption: `*┏━❬𝙱𝙾𝚃 𝚉𝙾𝙽𝙴 🐲❭*
 ┃🔗Url : ${anu.url}
 
 ┗━━━━━━━━━❊`,
-footer: `𝙴𝙳𝙼 𝙾𝙵𝙵𝙸𝙲𝙸𝙰𝙻`,
+footer: `${global.botname}`,
 buttons: buttons,
 headerType: 4,
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
-break		
-case 'getmusic': case 'getvideo': case 'yt': case 'youtube': case 'ytvideo': case 'ytmp3': case 'ytmp4': case 'ytmusic': {
-   if (isBan) return reply(mess.ban)	 			
-if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(mess.linkm)
-try {
-hx.youtube(args[0]).then(async(res) => {
-textyt = `*| YOUTUBE DOWNLOADER |*
-
-${global.themeemoji} Title : ${res.title}
-${global.themeemoji} Size : ${res.size}
-${global.themeemoji} Quality : ${res.quality}
-
-_Select video or audio and wait a while_`
-let buttons = [
-{buttonId: `ytvd ${res.link}`, buttonText: {displayText: '► Video'}, type: 1},
-{buttonId: `ytad ${res.mp3}`, buttonText: {displayText: '♫ Audio'}, type: 1}
-]
-let buttonMessage = {
-image: {url:res.thumb},
-caption: textyt,
-footer: `${botname}`,
-buttons: buttons,
-headerType: 4,
-contextInfo:{externalAdReply:{
-title: res.title,
-body: `${global.ownername}`,
-thumbnail: {url:res.thumb},
-mediaType:2,
-mediaUrl: args[0],
-sourceUrl: args[0]
-}}
-}
-XeonBotInc.sendMessage(from, buttonMessage, {quoted:m})
-}).catch(_ => _)
-} catch {
-reply("Link error!")
-}
-}
-break
+break	
 case 'ytvd': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
@@ -6599,13 +6495,55 @@ if (isBan) return reply(mess.ban)
                 let { ytv } = require('./lib/y2mate')
                 if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=RNa4thokVJ4 360p`)
                 if (!isUrl(args[0]) && !args[0].includes('youtube.com')) return reply(`The link you provided is invalid!`)
-                let quality = '720p'
+                let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 999999) return reply('*File Over Limit* '+util.format(media))
                 var capti = `*YOUTUBE VIDEO*\n\n*${themeemoji}Title* : ${media.title}\n*${themeemoji}File size* : ${media.filesizeF}\n*${themeemoji}Url* : ${isUrl(text)}\n*${themeemoji}Ext* : Mp4\n*${themeemoji}Resoultion* : ${args[1] || '360p'}`
                 var buf = await getBuffer(media.thumb)
                 XeonBotInc.sendMessage(m.chat, { image: { url: media.thumb }, jpegThumbnail:buf, caption: `${capti}` }, { quoted: m })
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, jpegThumbnail:buf, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `Here you go!` }, { quoted: m }).catch((err) => reply(mess.error))
+            }
+            break
+            case 'video': {
+               if (isBan) return reply(mess.ban)	 			
+            if (isBanChat) return reply(mess.banChat)
+            let yts = require("yt-search")
+            let search = await yts(text)
+            let anu = search.videos[0]
+            let ytvc = await hx.youtube(anu.url)
+            let buttons = [
+            {buttonId: `ytmp4x ${anu.url} 360p`, buttonText: {displayText: '360p'}, type: 1},
+            {buttonId: `ytmp4x ${anu.url} 480p`, buttonText: {displayText: '480p'}, type: 1},
+            {buttonId: `ytmp4x ${anu.url} 720p`, buttonText: {displayText: '720p'}, type: 1}
+            ]
+            let buttonMessage = {
+            image: { url: anu.thumbnail },
+            caption: `*┏━❬EDM BOT MD🐲❭*
+                
+            *⬇️ YT VIDEO DOWNLOADER*
+            
+            ┃💎Title : ${anu.title}
+            
+            ┃⏳Duration : ${anu.timestamp}
+            
+            ┃✍️Author : ${anu.author.name}
+            
+            ┃🔗Url : ${anu.url}
+            
+            ┗━━━━━━━━━━━✺`,
+            footer: `${global.botname}`,
+            buttons: buttons,
+            headerType: 4,
+            contextInfo:{externalAdReply:{
+            title: anu.title,
+            body: `${global.botname}`,
+            thumbnail: log0,
+            mediaType:2,
+            mediaUrl: anu.url,
+            sourceUrl: anu.url
+            }}
+            }
+            XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
             case 'ytdl': {
@@ -9360,7 +9298,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 									{
 										"title": "Sticker Menu 🃏",
 										"description": "Displays The List Of Sticker Features",
-										"rowId": `${prefix}stickermenu`
+										"rowId": `${prefix}indomenu`
 									},
 									{
 										"title": "Search Menu 🔎",
