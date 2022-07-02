@@ -157,16 +157,20 @@ XeonBotInc.ev.on('group-participants.update', async (anu) => {
 	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 	            const xmembers = metadata.participants.length
                 let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                xeonbody = `┌─❖
-│「 𝗛𝗶 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
-   │✑  ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xmembers}th
-   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
-   │✑ ${xtime} ${xdate}
-   └───────────────┈ ⳹`
+                xeonbody = `┏━━━━━━━━━━━┓
+     🥳ℍ𝔼𝕃𝕃𝕆🥳
+┗━━━━━━━━━━━┛
+➵▬▬▬▬▬▬▬▬▬▬▬▬
+┃✿ @${xeonName.split("@")[0]}
+┃
+┃✿Welcome to :
+┃ ${metadata.subject}
+┃
+┃✿ ${xmembers}th Member
+┃ 
+┃✿ Time :
+┃ ${xdate} ${xtime}  
+┗⭕━⭕━⭕━⭕━⭕━⭕━`
    //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
@@ -201,16 +205,20 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                 	let xeonName = num
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
-                    xeonbody = `┌─❖
-│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
-└┬❖ 「 @${xeonName.split("@")[0]}  」
-   │✑  𝗟𝗲𝗳𝘁 
-   │✑ ${metadata.subject}
-   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
-   │✑ ${xeonmembers}th
-   │✑  𝗧𝗶𝗺𝗲 : 
-   │✑  ${xeontime} ${xeondate}
-   └───────────────┈ ⳹`
+                    xeonbody = `┏━━━━━━━━━━━┓
+     𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋
+┗━━━━━━━━━━━┛
+➵▬▬▬▬▬▬▬▬▬▬▬▬
+┃✿ @${xeonName.split("@")[0]}
+┃
+┃✿Left from :
+┃ ${metadata.subject}
+┃
+┃✿ ${xeonmembers}th Member
+┃ 
+┃✿ Time :
+┃ ${xeondate} ${xeontime}  
+┗⭕━⭕━⭕━⭕━⭕━⭕━`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
    //you fail to put, i sue you for sure!
