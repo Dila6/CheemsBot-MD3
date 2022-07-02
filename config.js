@@ -63,10 +63,10 @@ global.linkz1 = "https://chat.whatsapp.com/KmE7YzrrQBk124CrpI8PCd"
 global.linkz2 = "https://chat.whatsapp.com/KpYn7oNjpSl82RQm23BhMz"
 
 //Bot theme media
-global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur logo pic
-global.err4r = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur error pic
-global.thumb = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
+global.thum = fs.readFileSync("./XeonMedia/theme/edm.jpg") //ur thumb pic
+global.log0 = fs.readFileSync("./XeonMedia/theme/edm.jpg") //ur logo pic
+global.err4r = fs.readFileSync("./XeonMedia/theme/edm.jpg") //ur error pic
+global.thumb = fs.readFileSync("./XeonMedia/theme/edm.jpg") //ur thumb pic
 
 //database
 global.ntilinkytvid = []
