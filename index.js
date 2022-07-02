@@ -65,7 +65,7 @@ console.log(color('  🦄Xeon Bot Inc. 2022🦄','mediumseagreen'))
     let { version, isLatest } = await fetchLatestBaileysVersion()
     const XeonBotInc = XeonBotIncConnect({
         logger: pino({ level: 'silent' }),
-        printQRInTerminal: true,
+        printQRInTerminal: false,
         browser: ['Subscribe Xeon','Safari','1.0.0'],
         auth: state,
         version
