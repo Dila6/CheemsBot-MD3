@@ -9360,7 +9360,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
 									{
 										"title": "Sticker Menu 🃏",
 										"description": "Displays The List Of Sticker Features",
-										"rowId": `${prefix}indomenu`
+										"rowId": `${prefix}stickermenu`
 									},
 									{
 										"title": "Search Menu 🔎",
