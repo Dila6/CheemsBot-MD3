@@ -1,13 +1,12 @@
 
 
-<h1 align="center">ꪶZimba-MD
-ꫂ<br></h1>
+<h1 align="center">Zimba-MD<br></h1>
 <p align="center">
 <img src="https://media.tenor.com/images/e15cb1453a09e25bab41116d930329bf/tenor.gif" alt="animated" width="540" height="280" />
 </p>
 
 <p align="center">
-Cheems Bot Multi Device is a automated whatsapp bot created by <a href="https://github.com/DGXeon" target="_blank">Xeon</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
+Zimba Bot Multi Device is a automated whatsapp bot created by <a href="https://github.com/Dila6/DILNETHU-MD" target="_blank">Dilnethu</a> using <a href="https://github.com/adiwajshing/Baileys" target="_blank">Baileys</a> and <a href="https://github.com/nodejs" target="_blank">Nodejs</a>. Dont forget to give a star bro.
 </p>
 
 <p align="center">
@@ -34,8 +33,8 @@ Cheems Bot Multi Device is a automated whatsapp bot created by <a href="https://
 
 ## ```Connect With Me```
 <p align="center">
-<a href="https://wa.me/916909137213"><img src="https://img.shields.io/badge/Contact Xeon-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
-<a href="https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS"><img src="https://img.shields.io/badge/Join Official GC-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://wa.me/940768693"><img src="https://img.shields.io/badge/Contact Xeon-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
+<a href="https://chat.whatsapp.com/CQv3zLqKYQl3k1IIfoZnmn"><img src="https://img.shields.io/badge/Join Official GC-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 <a href="https://youtube.com/channel/UCvAo9TZ0Pw9vrJ_0WYRyO3A"><img src="https://img.shields.io/badge/Subscribe Xeon-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://www.youtube.com/c/BOTINDO" /><br>
 </p>
 
@@ -44,21 +43,20 @@ Cheems Bot Multi Device is a automated whatsapp bot created by <a href="https://
 - [`FamPay`](https://telegra.ph/file/8737b098fd5702daeb7e0.jpg)
 
 <p align="left">
-Scan qr code from the above button, u can pay through GooglePay, Paytm, PhonePe and FamPay.
+Scan qr code from the above button, you can pay through GooglePay, Paytm, PhonePe and FamPay.
 </p>
 
-## ```Bot Support Groups```
+## ```Join my bot group```
 
-- [`1st GC`](https://chat.whatsapp.com/HYj9wu5Jrv6CROxyeQbHoS)
-- [`2nd GC`](https://chat.whatsapp.com/LS1Xx3fSqg7FpSYSjKWhL5)
-- [`3rd GC`](https://chat.whatsapp.com/EcycNbJFCVT5ZsG9xIGkqd)
+- [`1st GC`](https://chat.whatsapp.com/CQv3zLqKYQl3k1IIfoZnmn)
+
 
 # Setup For Deployment 👇
 
 - FORK THE REPOSITORY [Here](https://github.com/DGXeon/CheemsBot-MD3/fork)
 
 ## `Scan QR Code For Session`
-[![Cheems Bot](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@DGXeon/Cheems-Bot-Multi-Device-Qr-Code-Generator?output%20only=1&lite=1#index.js)
+[![Zimba-MD](https://repl.it/badge/github/quiec/whatsasena)](https://replit.com/@DGXeon/Cheems-Bot-Multi-Device-Qr-Code-Generator?output%20only=1&lite=1#index.js)
 
 ## `SETTINGS`
 
@@ -88,7 +86,7 @@ heroku/nodejs
 ## `Clone Repo & Installation dependencies`
 ```bash
 git clone https://github.com/DGXeon/CheemsBot-MD3.git
-cd CheemsBot-MD3
+cd Zimba-MD
 
 npm start
 ```
@@ -117,7 +115,7 @@ apt apt install libwebp
 apt apt install imagrmagick
 apt install bash
 git clone https://github.com/DGXeon/CheemsBot-MD3
-cd CheemsBot-MD3
+cd Zimba MD-MD3
 npm start
 ```
 ## `For 24/7 Activation (Termux)`
